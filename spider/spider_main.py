@@ -24,7 +24,7 @@ class SpiderMain(object):
                 self.urls.add_new_urls(new_urls)
                 self.outputer.collect_data(new_data)
                 
-                if count == 1000:
+                if count == 50:
                     break
                 count = count + 1
         except:
@@ -33,6 +33,6 @@ class SpiderMain(object):
         
 
 if __name__ == "__main__":
-    root_url = "http://baike.baidu.com/item/Python/407313?fr=aladdin"
+    root_url = "https://en.wikipedia.org/wiki/Python_(programming_language)"
     obj_spider = SpiderMain()
     obj_spider.crawl(root_url) 
